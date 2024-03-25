@@ -325,7 +325,7 @@ class StereonetAxes(LambertAxes):
         return self._polar.set_thetagrids(angles, labels, frac, **kwargs)
 
     def get_azimuth_ticks(self, minor=False):
-        return self._polar.get_xticks(minor)
+        return self._polar.get_xticks(minor=False)
 
     def set_azimuth_ticklabels(self, labels, fontdict=None, **kwargs):
         """
@@ -342,7 +342,7 @@ class StereonetAxes(LambertAxes):
 
     def get_azimuth_ticklabels(self, minor=False):
         """Get the azimuth tick labels as a list of Text artists."""
-        return self._polar.get_xticklabels(minor)
+        return self._polar.get_xticklabels(minor=False)
 
     def cone(self, plunge, bearing, angle, segments=100, bidirectional=True,
              **kwargs):
