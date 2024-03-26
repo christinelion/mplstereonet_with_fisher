@@ -338,7 +338,7 @@ class StereonetAxes(LambertAxes):
         **kwargs
             Additional parameters are text properties for the labels.
         """
-        return self._polar.set_xticklabels(labels, fontdict, **kwargs)
+        return self._polar.set_xticklabels(labels, minor=False, fontdict=fontdict, **kwargs)
 
     def get_azimuth_ticklabels(self, minor=False):
         """Get the azimuth tick labels as a list of Text artists."""
